@@ -14,9 +14,10 @@
  * limitations under the License.
  */
 
-package com.google.zxing.client.android;
+package com.google.zxing.client.android.decode;
 
 import com.google.zxing.ResultPoint;
+import com.google.zxing.client.android.R;
 import com.google.zxing.client.android.camera.CameraManager;
 
 import android.annotation.SuppressLint;
@@ -27,6 +28,7 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 
 import java.util.ArrayList;
@@ -108,8 +110,13 @@ public final class ViewfinderView extends View {
             paint.setColor(laserColor);
             paint.setAlpha(SCANNER_ALPHA[scannerAlpha]);
             scannerAlpha = (scannerAlpha + 1) % SCANNER_ALPHA.length;
-            int middle = frame.height() / 2 + frame.top;
-            canvas.drawRect(frame.left + 2, middle - 1, frame.right - 1, middle + 2, paint);
+            //int middle = frame.height() / 2 + frame.top;
+            //canvas.drawRect(frame.left + 2, middle - 1, frame.right - 1, middle + 2, paint);
+
+            long msecs = System.currentTimeMillis()/5;
+            long toppos = msecs % frame.height() + frame.top;
+            canvas.drawRect(frame.left + 2, toppos - 1, frame.right - 1, toppos + 2, paint);
+
 
             float scaleX = frame.width() / (float) previewFrame.width();
             float scaleY = frame.height() / (float) previewFrame.height();
@@ -162,16 +169,6 @@ public final class ViewfinderView extends View {
         if (resultBitmap != null) {
             resultBitmap.recycle();
         }
-        invalidate();
-    }
-
-    /**
-     * Draw a bitmap with the result points highlighted instead of the live scanning display.
-     *
-     * @param barcode An image of the decoded barcode.
-     */
-    public void drawResultBitmap(Bitmap barcode) {
-        resultBitmap = barcode;
         invalidate();
     }
 

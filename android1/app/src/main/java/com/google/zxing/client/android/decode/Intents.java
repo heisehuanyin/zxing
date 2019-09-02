@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.zxing.client.android;
+package com.google.zxing.client.android.decode;
 
 /**
  * This class provides the constants to use when sending an Intent to Barcode Scanner.

@@ -1,13 +1,5 @@
 [
     {
-        "merged": "/Users/wangshuai/Project/other/zxing/android1/app/build/intermediates/res/merged/debug/layout-ldpi_capture.xml.flat",
-        "source": "/Users/wangshuai/Project/other/zxing/android1/app/src/main/res/layout-ldpi/capture.xml"
-    },
-    {
-        "merged": "/Users/wangshuai/Project/other/zxing/android1/app/build/intermediates/res/merged/debug/drawable_share_via_barcode.png.flat",
-        "source": "/Users/wangshuai/Project/other/zxing/android1/app/src/main/res/drawable/share_via_barcode.png"
-    },
-    {
         "merged": "/Users/wangshuai/Project/other/zxing/android1/app/build/intermediates/res/merged/debug/layout_capture.xml.flat",
         "source": "/Users/wangshuai/Project/other/zxing/android1/app/src/main/res/layout/capture.xml"
     },
@@ -24,8 +16,16 @@
         "source": "/Users/wangshuai/Project/other/zxing/android1/app/src/main/res/drawable-xhdpi/launcher_icon.png"
     },
     {
+        "merged": "/Users/wangshuai/Project/other/zxing/android1/app/build/intermediates/res/merged/debug/layout-ldpi_capture.xml.flat",
+        "source": "/Users/wangshuai/Project/other/zxing/android1/app/src/main/res/layout-ldpi/capture.xml"
+    },
+    {
         "merged": "/Users/wangshuai/Project/other/zxing/android1/app/build/intermediates/res/merged/debug/xml_preferences.xml.flat",
         "source": "/Users/wangshuai/Project/other/zxing/android1/app/src/main/res/xml/preferences.xml"
+    },
+    {
+        "merged": "/Users/wangshuai/Project/other/zxing/android1/app/build/intermediates/res/merged/debug/drawable_share_via_barcode.png.flat",
+        "source": "/Users/wangshuai/Project/other/zxing/android1/app/src/main/res/drawable/share_via_barcode.png"
     },
     {
         "merged": "/Users/wangshuai/Project/other/zxing/android1/app/build/intermediates/res/merged/debug/drawable-xxhdpi_launcher_icon.png.flat",

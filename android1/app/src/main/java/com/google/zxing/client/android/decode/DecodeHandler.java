@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.zxing.client.android;
+package com.google.zxing.client.android.decode;
 
 import android.graphics.Bitmap;
 
@@ -24,6 +24,7 @@ import com.google.zxing.MultiFormatReader;
 import com.google.zxing.PlanarYUVLuminanceSource;
 import com.google.zxing.ReaderException;
 import com.google.zxing.Result;
+import com.google.zxing.client.android.R;
 import com.google.zxing.common.HybridBinarizer;
 
 import android.os.Bundle;
