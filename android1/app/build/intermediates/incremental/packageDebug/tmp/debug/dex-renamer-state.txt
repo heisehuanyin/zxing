@@ -1,4 +1,4 @@
-#Mon Sep 02 11:15:53 CST 2019
+#Mon Sep 02 11:25:26 CST 2019
 base.0=/Users/wangshuai/Project/other/zxing/android1/app/build/intermediates/dex/debug/mergeExtDexDebug/out/classes.dex
 path.1=classes.dex
 renamed.1=classes2.dex

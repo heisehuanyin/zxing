@@ -85,9 +85,6 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
     private View resultView;
     private Result lastResult;
     private boolean hasSurface;
-    private boolean copyToClipboard;
-    private IntentSource source;
-    private String sourceUrl;
     private Collection<BarcodeFormat> decodeFormats;
     private Map<DecodeHintType, ?> decodeHints;
     private String characterSet;
@@ -161,51 +158,9 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
 
         Intent intent = getIntent();
 
-        copyToClipboard = prefs.getBoolean(PreferencesActivity.KEY_COPY_TO_CLIPBOARD, true)
-                && (intent == null || intent.getBooleanExtra(Intents.Scan.SAVE_HISTORY, true));
 
-        source = IntentSource.NONE;
-        sourceUrl = null;
         decodeFormats = null;
         characterSet = null;
-
-        if (intent != null) {
-
-            String action = intent.getAction();
-            String dataString = intent.getDataString();
-
-            if (Intents.Scan.ACTION.equals(action)) {
-
-                // Scan the formats the intent requested, and return the result to the calling activity.
-                source = IntentSource.NATIVE_APP_INTENT;
-                decodeFormats = DecodeFormatManager.parseDecodeFormats(intent);
-                decodeHints = DecodeHintManager.parseDecodeHints(intent);
-
-                if (intent.hasExtra(Intents.Scan.WIDTH) && intent.hasExtra(Intents.Scan.HEIGHT)) {
-                    int width = intent.getIntExtra(Intents.Scan.WIDTH, 0);
-                    int height = intent.getIntExtra(Intents.Scan.HEIGHT, 0);
-                    if (width > 0 && height > 0) {
-                        cameraManager.setManualFramingRect(width, height);
-                    }
-                }
-
-                if (intent.hasExtra(Intents.Scan.CAMERA_ID)) {
-                    int cameraId = intent.getIntExtra(Intents.Scan.CAMERA_ID, -1);
-                    if (cameraId >= 0) {
-                        cameraManager.setManualCameraId(cameraId);
-                    }
-                }
-
-                String customPromptMessage = intent.getStringExtra(Intents.Scan.PROMPT_MESSAGE);
-                if (customPromptMessage != null) {
-                    statusView.setText(customPromptMessage);
-                }
-
-            }
-
-            characterSet = intent.getStringExtra(Intents.Scan.CHARACTER_SET);
-
-        }
 
         SurfaceView surfaceView = (SurfaceView) findViewById(R.id.preview_view);
         SurfaceHolder surfaceHolder = surfaceView.getHolder();
@@ -281,16 +236,11 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         switch (keyCode) {
             case KeyEvent.KEYCODE_BACK:
-                if (source == IntentSource.NATIVE_APP_INTENT) {
+                {
                     setResult(RESULT_CANCELED);
                     finish();
                     return true;
                 }
-                if ((source == IntentSource.NONE || source == IntentSource.ZXING_LINK) && lastResult != null) {
-                    restartPreviewAfterDelay(0L);
-                    return true;
-                }
-                break;
             case KeyEvent.KEYCODE_FOCUS:
             case KeyEvent.KEYCODE_CAMERA:
                 // Handle these events so they don't launch the Camera app

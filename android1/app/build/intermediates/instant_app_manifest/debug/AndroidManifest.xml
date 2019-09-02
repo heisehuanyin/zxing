@@ -53,7 +53,8 @@
         android:debuggable="true"
         android:icon="@drawable/launcher_icon"
         android:label="@string/app_name"
-        android:logo="@drawable/launcher_icon" >
+        android:logo="@drawable/launcher_icon"
+        android:testOnly="true" >
         <activity
             android:name="com.google.zxing.client.android.CaptureActivity"
             android:clearTaskOnLaunch="true"
