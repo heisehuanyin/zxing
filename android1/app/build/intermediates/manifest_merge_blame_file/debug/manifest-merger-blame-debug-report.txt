@@ -1,0 +1,287 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<!--
+3 Copyright (C) 2008 ZXing authors
+4
+5 Licensed under the Apache License, Version 2.0 (the "License");
+6 you may not use this file except in compliance with the License.
+7 You may obtain a copy of the License at
+8
+9      http://www.apache.org/licenses/LICENSE-2.0
+10
+11 Unless required by applicable law or agreed to in writing, software
+12 distributed under the License is distributed on an "AS IS" BASIS,
+13 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+14 See the License for the specific language governing permissions and
+15 limitations under the License.
+16-->
+17<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+18    package="com.google.zxing.client.android"
+19    android:installLocation="auto"
+20    android:versionCode="108"
+21    android:versionName="4.7.8" >
+22
+23    <uses-sdk
+24        android:minSdkVersion="27"
+24-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml
+25        android:targetSdkVersion="27" />
+25-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml
+26
+27    <uses-permission android:name="android.permission.CAMERA" />
+27-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:22:5-65
+27-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:22:22-62
+28    <uses-permission android:name="android.permission.INTERNET" />
+28-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:23:5-67
+28-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:23:22-64
+29    <uses-permission android:name="android.permission.VIBRATE" />
+29-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:24:5-66
+29-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:24:22-63
+30    <uses-permission android:name="android.permission.FLASHLIGHT" />
+30-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:25:5-69
+30-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:25:22-66
+31    <uses-permission android:name="android.permission.READ_CONTACTS" />
+31-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:26:5-72
+31-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:26:22-69
+32    <!-- unavailable in API 23 -->
+33    <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS" />
+33-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:28:5-93
+33-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:28:22-90
+34    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+34-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:29:5-81
+34-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:29:22-78
+35    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+35-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:30:5-76
+35-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:30:22-73
+36    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+36-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:31:5-76
+36-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:31:22-73
+37
+38    <uses-feature android:name="android.hardware.camera.any" />
+38-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:33:5-64
+38-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:33:19-61
+39    <uses-feature
+39-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:34:5-36:36
+40        android:name="android.hardware.camera.autofocus"
+40-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:35:9-57
+41        android:required="false" />
+41-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:36:9-33
+42    <uses-feature
+42-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:37:5-39:36
+43        android:name="android.hardware.camera.flash"
+43-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:38:9-53
+44        android:required="false" />
+44-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:39:9-33
+45    <uses-feature android:name="android.hardware.screen.landscape" />
+45-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:40:5-70
+45-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:40:19-67
+46    <uses-feature
+46-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:41:5-43:36
+47        android:name="android.hardware.wifi"
+47-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:42:9-45
+48        android:required="false" />
+48-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:43:9-33
+49
+50    <application
+50-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:45:5-145:19
+51        android:allowBackup="true"
+51-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:46:9-35
+52        android:debuggable="true"
+53        android:icon="@drawable/launcher_icon"
+53-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:47:9-47
+54        android:label="@string/app_name"
+54-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:48:9-41
+55        android:logo="@drawable/launcher_icon" >
+55-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:49:9-47
+56        <activity
+56-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:50:9-113:20
+57            android:name="com.google.zxing.client.android.CaptureActivity"
+57-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:51:13-44
+58            android:clearTaskOnLaunch="true"
+58-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:52:13-45
+59            android:screenOrientation="sensorLandscape"
+59-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:53:13-56
+60            android:stateNotNeeded="true"
+60-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:54:13-42
+61            android:theme="@style/CaptureTheme"
+61-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:55:13-48
+62            android:windowSoftInputMode="stateAlwaysHidden" >
+62-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:56:13-60
+63            <intent-filter>
+63-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:57:13-60:29
+64                <action android:name="android.intent.action.MAIN" />
+64-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:58:17-69
+64-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:58:25-66
+65
+66                <category android:name="android.intent.category.LAUNCHER" />
+66-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:59:17-77
+66-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:59:27-74
+67            </intent-filter>
+68            <intent-filter>
+68-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:61:13-64:29
+69                <action android:name="com.google.zxing.client.android.SCAN" />
+69-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:62:17-79
+69-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:62:25-76
+70
+71                <category android:name="android.intent.category.DEFAULT" />
+71-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:63:17-76
+71-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:63:27-73
+72            </intent-filter>
+73            <!-- Allow web apps to launch Barcode Scanner by linking to http://zxing.appspot.com/scan. -->
+74            <intent-filter>
+74-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:66:13-76:29
+75                <action android:name="android.intent.action.VIEW" />
+75-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:67:17-69
+75-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:67:25-66
+76
+77                <category android:name="android.intent.category.DEFAULT" />
+77-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:63:17-76
+77-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:63:27-73
+78                <category android:name="android.intent.category.BROWSABLE" />
+78-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:70:17-78
+78-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:70:27-75
+79
+80                <data
+80-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:72:17-75:45
+81                    android:host="zxing.appspot.com"
+81-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:73:21-53
+82                    android:path="/scan"
+82-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:74:21-41
+83                    android:scheme="http" />
+83-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:75:21-42
+84            </intent-filter>
+85            <!-- We also support a Google Product Search URL. -->
+86            <intent-filter>
+86-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:78:13-88:29
+87                <action android:name="android.intent.action.VIEW" />
+87-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:67:17-69
+87-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:67:25-66
+88
+89                <category android:name="android.intent.category.DEFAULT" />
+89-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:63:17-76
+89-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:63:27-73
+90                <category android:name="android.intent.category.BROWSABLE" />
+90-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:70:17-78
+90-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:70:27-75
+91
+92                <data
+92-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:72:17-75:45
+93                    android:host="www.google.com"
+93-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:73:21-53
+94                    android:path="/m/products/scan"
+94-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:74:21-41
+95                    android:scheme="http" />
+95-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:75:21-42
+96            </intent-filter>
+97            <!-- And the UK version. -->
+98            <intent-filter>
+98-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:90:13-100:29
+99                <action android:name="android.intent.action.VIEW" />
+99-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:67:17-69
+99-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:67:25-66
+100
+101                <category android:name="android.intent.category.DEFAULT" />
+101-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:63:17-76
+101-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:63:27-73
+102                <category android:name="android.intent.category.BROWSABLE" />
+102-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:70:17-78
+102-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:70:27-75
+103
+104                <data
+104-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:72:17-75:45
+105                    android:host="www.google.co.uk"
+105-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:73:21-53
+106                    android:path="/m/products/scan"
+106-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:74:21-41
+107                    android:scheme="http" />
+107-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:75:21-42
+108            </intent-filter>
+109            <!-- Support zxing://scan/?... like iPhone app -->
+110            <intent-filter>
+110-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:102:13-112:29
+111                <action android:name="android.intent.action.VIEW" />
+111-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:67:17-69
+111-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:67:25-66
+112
+113                <category android:name="android.intent.category.DEFAULT" />
+113-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:63:17-76
+113-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:63:27-73
+114                <category android:name="android.intent.category.BROWSABLE" />
+114-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:70:17-78
+114-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:70:27-75
+115
+116                <data
+116-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:72:17-75:45
+117                    android:host="scan"
+117-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:73:21-53
+118                    android:path="/"
+118-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:74:21-41
+119                    android:scheme="zxing" />
+119-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:75:21-42
+120            </intent-filter>
+121        </activity>
+122        <activity
+122-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:114:9-117:45
+123            android:name="com.google.zxing.client.android.PreferencesActivity"
+123-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:115:13-48
+124            android:label="@string/preferences_name"
+124-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:116:13-53
+125            android:stateNotNeeded="true" />
+125-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:117:13-42
+126        <activity
+126-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:118:9-127:20
+127            android:name="com.google.zxing.client.android.book.SearchBookContentsActivity"
+127-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:119:13-60
+128            android:label="@string/sbc_name"
+128-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:120:13-45
+129            android:screenOrientation="sensorLandscape"
+129-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:121:13-56
+130            android:stateNotNeeded="true" >
+130-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:122:13-42
+131            <intent-filter>
+131-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:123:13-126:29
+132                <action android:name="com.google.zxing.client.android.SEARCH_BOOK_CONTENTS" />
+132-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:124:17-95
+132-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:124:25-92
+133
+134                <category android:name="android.intent.category.DEFAULT" />
+134-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:63:17-76
+134-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:63:27-73
+135            </intent-filter>
+136        </activity>
+137        <activity
+137-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:128:9-136:20
+138            android:name="com.google.zxing.client.android.share.ShareActivity"
+138-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:129:13-48
+139            android:screenOrientation="user"
+139-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:130:13-45
+140            android:stateNotNeeded="true" >
+140-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:131:13-42
+141            <intent-filter>
+141-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:132:13-135:29
+142                <action android:name="com.google.zxing.client.android.SHARE" />
+142-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:133:17-80
+142-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:133:25-77
+143
+144                <category android:name="android.intent.category.DEFAULT" />
+144-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:63:17-76
+144-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:63:27-73
+145            </intent-filter>
+146        </activity>
+147        <activity
+147-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:137:9-140:45
+148            android:name="com.google.zxing.client.android.share.BookmarkPickerActivity"
+148-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:138:13-57
+149            android:label="@string/bookmark_picker_name"
+149-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:139:13-57
+150            android:stateNotNeeded="true" />
+150-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:140:13-42
+151        <activity
+151-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:141:9-144:45
+152            android:name="com.google.zxing.client.android.share.AppPickerActivity"
+152-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:142:13-52
+153            android:label="@string/app_picker_name"
+153-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:143:13-52
+154            android:stateNotNeeded="true" />
+154-->/Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:144:13-42
+155    </application>
+156
+157</manifest>
