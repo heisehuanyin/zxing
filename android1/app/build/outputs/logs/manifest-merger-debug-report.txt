@@ -1,12 +1,12 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:16:1-147:12
-INJECTED from /Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:16:1-147:12
-INJECTED from /Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:16:1-147:12
-INJECTED from /Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:16:1-147:12
-INJECTED from /Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:16:1-147:12
-INJECTED from /Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:16:1-147:12
-INJECTED from /Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:16:1-147:12
+ADDED from /Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:16:1-116:12
+INJECTED from /Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:16:1-116:12
+INJECTED from /Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:16:1-116:12
+INJECTED from /Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:16:1-116:12
+INJECTED from /Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:16:1-116:12
+INJECTED from /Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:16:1-116:12
+INJECTED from /Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:16:1-116:12
 	package
 		ADDED from /Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:17:5-46
 		INJECTED from /Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml
@@ -86,7 +86,7 @@ ADDED from /Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidMan
 	android:name
 		ADDED from /Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:42:9-45
 application
-ADDED from /Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:45:5-145:19
+ADDED from /Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:45:5-114:19
 	android:label
 		ADDED from /Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:48:9-41
 	android:icon
@@ -153,60 +153,6 @@ intent-filter#action:name:android.intent.action.VIEW+category:name:android.inten
 ADDED from /Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:90:13-100:29
 intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:scan+data:path:/+data:scheme:zxing
 ADDED from /Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:102:13-112:29
-activity#com.google.zxing.client.android.PreferencesActivity
-ADDED from /Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:114:9-117:45
-	android:stateNotNeeded
-		ADDED from /Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:117:13-42
-	android:label
-		ADDED from /Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:116:13-53
-	android:name
-		ADDED from /Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:115:13-48
-activity#com.google.zxing.client.android.book.SearchBookContentsActivity
-ADDED from /Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:118:9-127:20
-	android:screenOrientation
-		ADDED from /Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:121:13-56
-	android:stateNotNeeded
-		ADDED from /Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:122:13-42
-	android:label
-		ADDED from /Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:120:13-45
-	android:name
-		ADDED from /Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:119:13-60
-intent-filter#action:name:com.google.zxing.client.android.SEARCH_BOOK_CONTENTS+category:name:android.intent.category.DEFAULT
-ADDED from /Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:123:13-126:29
-action#com.google.zxing.client.android.SEARCH_BOOK_CONTENTS
-ADDED from /Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:124:17-95
-	android:name
-		ADDED from /Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:124:25-92
-activity#com.google.zxing.client.android.share.ShareActivity
-ADDED from /Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:128:9-136:20
-	android:screenOrientation
-		ADDED from /Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:130:13-45
-	android:stateNotNeeded
-		ADDED from /Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:131:13-42
-	android:name
-		ADDED from /Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:129:13-48
-intent-filter#action:name:com.google.zxing.client.android.SHARE+category:name:android.intent.category.DEFAULT
-ADDED from /Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:132:13-135:29
-action#com.google.zxing.client.android.SHARE
-ADDED from /Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:133:17-80
-	android:name
-		ADDED from /Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:133:25-77
-activity#com.google.zxing.client.android.share.BookmarkPickerActivity
-ADDED from /Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:137:9-140:45
-	android:stateNotNeeded
-		ADDED from /Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:140:13-42
-	android:label
-		ADDED from /Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:139:13-57
-	android:name
-		ADDED from /Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:138:13-57
-activity#com.google.zxing.client.android.share.AppPickerActivity
-ADDED from /Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:141:9-144:45
-	android:stateNotNeeded
-		ADDED from /Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:144:13-42
-	android:label
-		ADDED from /Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:143:13-52
-	android:name
-		ADDED from /Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml:142:13-52
 uses-sdk
 INJECTED from /Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/wangshuai/Project/other/zxing/android1/app/src/main/AndroidManifest.xml

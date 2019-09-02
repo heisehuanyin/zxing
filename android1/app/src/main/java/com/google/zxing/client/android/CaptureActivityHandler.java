@@ -36,6 +36,7 @@ import android.os.Message;
 import android.util.Log;
 
 import java.util.Collection;
+import java.util.EnumMap;
 import java.util.Map;
 
 /**
@@ -64,9 +65,11 @@ public final class CaptureActivityHandler extends Handler {
                          String characterSet,
                          CameraManager cameraManager) {
     this.activity = activity;
+
     decodeThread = new DecodeThread(activity, decodeFormats, baseHints, characterSet,
-        new ViewfinderResultPointCallback(activity.getViewfinderView()));
+            (point) -> {activity.getViewfinderView().addPossibleResultPoint(point);});
     decodeThread.start();
+
     state = State.SUCCESS;
 
     // Start ourselves capturing previews and decoding.
@@ -106,39 +109,6 @@ public final class CaptureActivityHandler extends Handler {
         activity.setResult(Activity.RESULT_OK, (Intent) message.obj);
         activity.finish();
         break;
-      case R.id.launch_product_query:
-        String url = (String) message.obj;
-
-        Intent intent = new Intent(Intent.ACTION_VIEW);
-        intent.addFlags(Intents.FLAG_NEW_DOC);
-        intent.setData(Uri.parse(url));
-
-        ResolveInfo resolveInfo =
-            activity.getPackageManager().resolveActivity(intent, PackageManager.MATCH_DEFAULT_ONLY);
-        String browserPackageName = null;
-        if (resolveInfo != null && resolveInfo.activityInfo != null) {
-          browserPackageName = resolveInfo.activityInfo.packageName;
-          Log.d(TAG, "Using browser in package " + browserPackageName);
-        }
-
-        // Needed for default Android browser / Chrome only apparently
-        if (browserPackageName != null) {
-          switch (browserPackageName) {
-            case "com.android.browser":
-            case "com.android.chrome":
-              intent.setPackage(browserPackageName);
-              intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-              intent.putExtra(Browser.EXTRA_APPLICATION_ID, browserPackageName);
-              break;
-          }
-        }
-
-        try {
-          activity.startActivity(intent);
-        } catch (ActivityNotFoundException ignored) {
-          Log.w(TAG, "Can't find anything to handle VIEW of URI");
-        }
-        break;
     }
   }
 
@@ -166,5 +136,6 @@ public final class CaptureActivityHandler extends Handler {
       activity.drawViewfinder();
     }
   }
+
 
 }

@@ -28,8 +28,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.regex.Pattern;
 
-final class DecodeFormatManager {
-
+final class DecodeFormatTypes {
   private static final Pattern COMMA_PATTERN = Pattern.compile(",");
 
   static final Set<BarcodeFormat> PRODUCT_FORMATS;
@@ -65,7 +64,6 @@ final class DecodeFormatManager {
     FORMATS_FOR_MODE.put(Intents.Scan.PDF417_MODE, PDF417_FORMATS);
   }
 
-  private DecodeFormatManager() {}
 
   static Set<BarcodeFormat> parseDecodeFormats(Intent intent) {
     Iterable<String> scanFormats = null;
@@ -76,13 +74,6 @@ final class DecodeFormatManager {
     return parseDecodeFormats(scanFormats, intent.getStringExtra(Intents.Scan.MODE));
   }
 
-  static Set<BarcodeFormat> parseDecodeFormats(Uri inputUri) {
-    List<String> formats = inputUri.getQueryParameters(Intents.Scan.FORMATS);
-    if (formats != null && formats.size() == 1 && formats.get(0) != null) {
-      formats = Arrays.asList(COMMA_PATTERN.split(formats.get(0)));
-    }
-    return parseDecodeFormats(formats, inputUri.getQueryParameter(Intents.Scan.MODE));
-  }
 
   private static Set<BarcodeFormat> parseDecodeFormats(Iterable<String> scanFormats, String decodeMode) {
     if (scanFormats != null) {
@@ -101,5 +92,4 @@ final class DecodeFormatManager {
     }
     return null;
   }
-
 }
