@@ -119,6 +119,7 @@
   <string name="preferences_name">选项</string>
   <string name="preferences_orientation_title">不自动旋转</string>
   <string name="preferences_play_beep_title">播放提示音</string>
+  <string name="preferences_vibrate_title">振动</string>
   <string name="preferences_remember_duplicates_summary">在历史记录中保存重复的记录</string>
   <string name="preferences_remember_duplicates_title">保存重复记录</string>
   <string name="preferences_result_title">搜索设置</string>
@@ -126,7 +127,6 @@
   <string name="preferences_search_country">搜索引擎国别</string>
   <string name="preferences_supplemental_summary">尝试检索关于条码内容的更多信息</string>
   <string name="preferences_supplemental_title">检索更多信息</string>
-  <string name="preferences_vibrate_title">振动</string>
   <string name="result_address_book">找到联系人信息</string>
   <string name="result_calendar">找到日程</string>
   <string name="result_email_address">找到电子邮件地址</string>

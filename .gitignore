@@ -3,3 +3,6 @@ target
 *.iml
 .DS_Store
 *android2/*
+*android1/app/build/*
+
+android1/app/build/
