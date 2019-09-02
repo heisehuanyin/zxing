@@ -62,16 +62,11 @@ public final class R {
     public static final int result_list_view=0x7f050018;
     public static final int result_view=0x7f050019;
     public static final int return_scan_result=0x7f05001a;
-    public static final int share_app_button=0x7f05001b;
-    public static final int share_bookmark_button=0x7f05001c;
-    public static final int share_clipboard_button=0x7f05001d;
-    public static final int share_contact_button=0x7f05001e;
-    public static final int share_text_view=0x7f05001f;
-    public static final int snippet_view=0x7f050020;
-    public static final int status_view=0x7f050021;
-    public static final int time_text_view=0x7f050022;
-    public static final int type_text_view=0x7f050023;
-    public static final int viewfinder_view=0x7f050024;
+    public static final int snippet_view=0x7f05001b;
+    public static final int status_view=0x7f05001c;
+    public static final int time_text_view=0x7f05001d;
+    public static final int type_text_view=0x7f05001e;
+    public static final int viewfinder_view=0x7f05001f;
   }
   public static final class layout {
     public static final int app_picker_list_item=0x7f060000;
@@ -81,7 +76,6 @@ public final class R {
     public static final int search_book_contents=0x7f060004;
     public static final int search_book_contents_header=0x7f060005;
     public static final int search_book_contents_list_item=0x7f060006;
-    public static final int share=0x7f060007;
   }
   public static final class menu {
     public static final int encode=0x7f070000;

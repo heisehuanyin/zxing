@@ -32,14 +32,6 @@
         "source": "/Users/wangshuai/Project/other/zxing/android1/app/src/main/res/layout/capture.xml"
     },
     {
-        "merged": "/Users/wangshuai/Project/other/zxing/android1/app/build/intermediates/res/merged/debug/layout_share.xml.flat",
-        "source": "/Users/wangshuai/Project/other/zxing/android1/app/src/main/res/layout/share.xml"
-    },
-    {
-        "merged": "/Users/wangshuai/Project/other/zxing/android1/app/build/intermediates/res/merged/debug/layout-land_share.xml.flat",
-        "source": "/Users/wangshuai/Project/other/zxing/android1/app/src/main/res/layout-land/share.xml"
-    },
-    {
         "merged": "/Users/wangshuai/Project/other/zxing/android1/app/build/intermediates/res/merged/debug/drawable_launcher_icon.png.flat",
         "source": "/Users/wangshuai/Project/other/zxing/android1/app/src/main/res/drawable/launcher_icon.png"
     },

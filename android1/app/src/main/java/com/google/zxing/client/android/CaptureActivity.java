@@ -25,14 +25,12 @@ import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Paint;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.KeyEvent;
-import android.view.MenuItem;
 import android.view.Surface;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
@@ -40,6 +38,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.DecodeHintType;
@@ -47,7 +46,6 @@ import com.google.zxing.Result;
 import com.google.zxing.ResultMetadataType;
 import com.google.zxing.ResultPoint;
 import com.google.zxing.client.android.camera.CameraManager;
-import com.google.zxing.client.android.share.ShareActivity;
 
 import java.io.IOException;
 import java.util.Collection;
@@ -309,21 +307,6 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
     }
 
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        Intent intent = new Intent(Intent.ACTION_VIEW);
-        intent.addFlags(Intents.FLAG_NEW_DOC);
-        switch (item.getItemId()) {
-            case R.id.menu_share:
-                intent.setClassName(this, ShareActivity.class.getName());
-                startActivity(intent);
-                break;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-        return true;
-    }
-
 
     private void decodeOrStoreSavedBitmap(Bitmap bitmap, Result result) {
         // Bitmap isn't used yet -- will be used soon
@@ -380,15 +363,15 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
             drawResultPoints(barcode, scaleFactor, rawResult);
         }
 
-        switch (source) {
-            case NATIVE_APP_INTENT:
-            case PRODUCT_SEARCH_LINK:
-                break;
-            case ZXING_LINK:
-                break;
-            case NONE:
-                break;
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        if (fromLiveScan && prefs.getBoolean(PreferencesActivity.KEY_BULK_MODE, false)) {
+            Toast.makeText(getApplicationContext(),
+                    getResources().getString(R.string.msg_bulk_mode_scanned) + " (" + rawResult.getText() + ')',
+                    Toast.LENGTH_SHORT).show();
+            // Wait a moment or else it will scan the same barcode continuously about 3 times
+            restartPreviewAfterDelay(BULK_MODE_SCAN_DELAY_MS);
         }
+
     }
 
     /**
